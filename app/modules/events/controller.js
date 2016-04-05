@@ -43,7 +43,12 @@ class EventsController {
 	}
 
   getData() {
-		this._$http.get(`http://gateway.marvel.com:80/v1/public/events/${this.param}&apikey=1c51377e8242564595ee97800ae287c7`);
+		this._$http
+		.get(`http://gateway.marvel.com:80/v1/public/events/${this.param}&apikey=1c51377e8242564595ee97800ae287c7`)
+		.then((response) => {
+			console.log(response);
+
+		});
   }
 
 }
