@@ -39,9 +39,11 @@ class EventsController {
 
 	constructor($http, $stateParams) {
     this._$http = $http;
+		this.param = $stateParams.param;
 	}
 
   getData() {
+		this._$http.get(`http://gateway.marvel.com:80/v1/public/events/${this.param}&apikey=1c51377e8242564595ee97800ae287c7`);
   }
 
 }
