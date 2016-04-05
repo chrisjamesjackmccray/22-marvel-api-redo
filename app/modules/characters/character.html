@@ -1,0 +1,25 @@
+
+<img class="Captain" ng-src="{{ charCtrl.image }}" alt="">
+<h1>{{ charCtrl.name }}</h1>
+<p>{{ charCtrl.description }}</p>
+
+
+
+
+
+<div ng-repeat="event in charCtrl.events">
+  <a ui-sref="events({ id: event.id })"><img src="{{ charCtrl.eventImage(event) }}"></a>
+  {{ event.title }}
+</div>
+
+
+<!-- <nav>
+  <ul>
+
+
+    <li> <a ui-sref="charCtrl.id"></a> </li>
+    <li> <a ui-sref="charCtrl.events({ this.events })"></a> </li>
+    <li> <a ui-sref=""></a> </li>
+
+  </ul>
+</nav> -->

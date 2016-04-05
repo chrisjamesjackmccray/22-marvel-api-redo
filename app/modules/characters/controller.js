@@ -55,11 +55,25 @@ class CharactersController {
 		.get(`http://gateway.marvel.com:80/v1/public/characters?name=${this.name}&apikey=1c51377e8242564595ee97800ae287c7`)
 		.then((response) => {
 			console.log(response);
-			this.description = response.data.results.object.comics.description;
-			this.image = response.
+			this.id = response.data.data.results[0].id;
+			this.description = response.data.data.results[0].description;
+			this.image = `${response.data.data.results[0].thumbnail.path}.${response.data.data.results[0].thumbnail.extension}`;
+
+			this._$http
+			.get(`http://gateway.marvel.com/v1/public/characters/${this.id}/events?apikey=1c51377e8242564595ee97800ae287c7`)
+			.then((response) => {
+				console.log(response);
+				this.events = response.data.data.results;
+			});
+
 
 		});
+
   }
+
+	eventImage(event) {
+		return `${event.thumbnail.path}.${event.thumbnail.extension}`;
+	}
 
 }
 
