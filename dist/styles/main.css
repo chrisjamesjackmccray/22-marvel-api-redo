@@ -3,3 +3,23 @@ body {
 
 .Captain {
   width: 400px; }
+
+.infoColumn {
+  width: 400px;
+  float: left;
+  margin: 20px 0 0 20px; }
+
+.infoColumn img {
+  width: 400px;
+  float: left; }
+
+.all {
+  width: 200px;
+  float: right;
+  margin: 0 0 0 10px; }
+
+.alltwo {
+  width: 200px;
+  margin: 20px 0 0 0;
+  padding: 0 0 0 0;
+  float: left; }

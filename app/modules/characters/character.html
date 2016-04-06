@@ -1,13 +1,11 @@
-
-<img class="Captain" ng-src="{{ charCtrl.image }}" alt="">
-<h1>{{ charCtrl.name }}</h1>
-<p>{{ charCtrl.description }}</p>
-
-
-
+<div class="infoColumn">
+  <img class="Captain" ng-src="{{ charCtrl.image }}" alt="">
+  <h1>{{ charCtrl.name }}</h1>
+  <p>{{ charCtrl.description }}</p>
+</div>
 
 
-<div ng-repeat="event in charCtrl.events">
-  <a ui-sref="events({ id: event.id })"><img src="{{ charCtrl.eventImage(event) }}"></a>
+<div class="all" ng-repeat="event in charCtrl.events">
+  <a ui-sref="events({ id: event.id })"><img class="alltwo" src="{{ charCtrl.eventImage(event) }}"></a>
   {{ event.title }}
 </div>

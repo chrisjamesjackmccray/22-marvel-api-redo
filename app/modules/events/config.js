@@ -21,8 +21,6 @@ function config($stateProvider) {
       controller: "EventsController as eventCtrl",
       template: require('./event.html')
     });
-
-
 }
 
 export default config;
