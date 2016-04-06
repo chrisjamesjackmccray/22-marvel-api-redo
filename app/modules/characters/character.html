@@ -1,3 +1,9 @@
+
+<div class="header">
+
+</div>
+
+
 <div class="infoColumn">
   <img class="Captain" ng-src="{{ charCtrl.image }}" alt="">
   <h1>{{ charCtrl.name }}</h1>
@@ -5,7 +11,11 @@
 </div>
 
 
-<div class="all" ng-repeat="event in charCtrl.events">
+<h2 class="eventstitle"> Events </h2>
+
+<div class="rightbox">
+ <div class="all" ng-repeat="event in charCtrl.events">
   <a ui-sref="events({ id: event.id })"><img class="alltwo" src="{{ charCtrl.eventImage(event) }}"></a>
   {{ event.title }}
+ </div>
 </div>

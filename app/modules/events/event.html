@@ -1,3 +1,9 @@
+<div class="header">
+
+</div>
+
+
+
 <div class="infoColumn">
   <img class="image" ng-src="{{ eventCtrl.image }}" alt="">
   <h1>{{ eventCtrl.title }}</h1>
@@ -5,7 +11,9 @@
 </div>
 
 
-<div ng-repeat="character in eventCtrl.characters.items">
-  <a ui-sref="characters({ name: character.name })">{{ character.name }}</a>
+<div class="righttextevent">
+  <div ng-repeat="character in eventCtrl.characters.items">
+    <a ui-sref="characters({ name: character.name })">{{ character.name }}</a>
 
+  </div>
 </div>
