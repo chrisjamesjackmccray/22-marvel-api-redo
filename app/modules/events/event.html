@@ -10,10 +10,10 @@
   <p>{{ eventCtrl.description }}</p>
 </div>
 
-
+<h3 class="charactertext"> Characters </h3>
 <div class="righttextevent">
-  <div ng-repeat="character in eventCtrl.characters.items">
-    <a ui-sref="characters({ name: character.name })">{{ character.name }}</a>
+  <div class="character" ng-repeat="character in eventCtrl.characters.items">
+    <a class="characters" ui-sref="characters({ name: character.name })">{{ character.name }}</a>
 
   </div>
 </div>
