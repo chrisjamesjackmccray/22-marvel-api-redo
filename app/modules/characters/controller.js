@@ -65,8 +65,6 @@ class CharactersController {
 				console.log(response);
 				this.events = response.data.data.results;
 			});
-
-
 		});
 
   }
