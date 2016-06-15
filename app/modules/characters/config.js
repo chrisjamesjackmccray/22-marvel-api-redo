@@ -16,7 +16,7 @@
 */
 function config($stateProvider) {
   $stateProvider
-    .state('characters',{
+    .state('/characters',{
       url: '/characters/:name',
       controller: "CharactersController as charCtrl",
       template: require('./character.html')
